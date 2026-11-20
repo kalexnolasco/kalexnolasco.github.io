@@ -3,24 +3,31 @@
 
   var EN = {
     "skip": "Skip to content",
-    "nav.about": "About", "nav.work": "Experience", "nav.projects": "Projects", "nav.stack": "Stack", "nav.contact": "Contact",
-    "hero.eyebrow": "Software engineer · Balearic Islands, Spain",
+    "nav.about": "About", "nav.work": "Experience", "nav.projects": "Projects", "nav.edu": "Education", "nav.stack": "Stack", "nav.contact": "Contact",
+    "hero.eyebrow": "Tech Lead · Python & data · Palma de Mallorca, Spain",
     "hero.title": "I build data platforms <span class=\"accent\">that stay up</span> and the tools to run them.",
-    "hero.lead": "I design and run network data pipelines at scale, infrastructure as code and consoles for operations teams. In my spare time I publish open source Python libraries and apps.",
+    "hero.lead": "I lead the Automation team at Wireless DNA: a distributed data platform for telecommunications, meteorology and IoT. 8+ years turning network data into reliable information. In my spare time I publish open source Python libraries and apps.",
     "hero.cta1": "See projects",
-    "facts.role": "Role", "facts.roleV": "Software engineer", "facts.company": "Company",
-    "facts.focus": "Focus", "facts.focusV": "Data · Automation · DevOps",
-    "facts.langs": "Languages", "facts.langsV": "Spanish · Technical English",
+    "facts.role": "Role", "facts.roleV": "Tech Lead, Automation team", "facts.company": "Company",
+    "facts.focus": "Focus", "facts.focusV": "Data pipelines · Backend · DevOps", "facts.edu": "Education", "facts.eduV": "Telematics Eng. & Mathematics (UIB)",
+    "facts.langs": "Languages", "facts.langsV": "Spanish · English",
     "about.title": "About me",
-    "about.p1": "I work where software meets operations: I write the code that processes a mobile operator's network data, the infrastructure that deploys it and the consoles the operations team uses every day.",
+    "about.p1": "I am Tech Lead of the Automation team at Wireless DNA. I make the architecture and stack decisions for a platform that processes telecom network data, weather station feeds and IoT sensor streams, and we own it end to end: code, multi-server deployment and monitoring.",
     "about.p2": "I care about stability over speed, decisions that are written down, and tools that make running a complex system boring, in the good sense.",
     "about.k1": "Reliability", "about.v1": "Immutable releases, rollback and alarms that matter.",
     "about.k2": "Automation", "about.v2": "Inventory as code: a deploy is one command.",
     "about.k3": "Observability", "about.v3": "Metrics and logs that answer real questions.",
     "work.title": "Experience",
-    "work.role": "Software engineer · Automation platform",
-    "work.when": "Present",
-    "work.intro": "A platform that collects, transforms and serves the performance and configuration data of a mobile operator's network, for thousands of network elements and several vendors.",
+    "work.r1": "Tech Lead · Automation Team", "work.d1": "Mar 2023 – present",
+    "work.intro": "I lead WDNA's distributed data processing platform, focused on telecommunications: performance and configuration data from mobile operators' networks, thousands of network elements and several vendors.",
+    "work.b0": "<strong>Modular architecture</strong> of the platform (telecom, meteorology, IoT and a common core), adopted as the company standard.",
+    "work.r2": "Software engineer · Data & automation", "work.d2": "Feb 2019 – Feb 2023",
+    "work.t2": "ETL pipelines for telecom network data from many sources (SNMP, SFTP, relational and time-series databases), server and service automation with Python and Bash, Docker containers and shared libraries for data access, credentials and monitoring.",
+    "work.r3": "Operations engineer", "work.d3": "Aug 2018 – Jan 2019",
+    "work.t3": "Network and infrastructure monitoring for telecom clients. After 6 months I moved to the development team thanks to my automation and scripting work.",
+    "work.r4": "Big Data Engineer (intern)", "work.d4": "May – Sep 2017",
+    "edu.title": "Education", "edu.deg": "Double degree in Telematics Engineering and Mathematics",
+    "edu.cert": "Apache Airflow 3 Fundamentals", "edu.certBy": "Astronomer certification",
     "work.b1": "<strong>Network data ETL</strong> with Apache Airflow 3 and Celery: reading, transforming and loading counters from several vendors, with native Rust parsers for the largest files.",
     "work.b2": "<strong>Storage</strong> on ClickHouse, MySQL/Percona and PostgreSQL with Patroni, with replication and failover.",
     "work.b3": "<strong>Infrastructure as code</strong>: declarative inventory, Docker containers and deploys with immutable releases, checksum verification and rollback.",
@@ -36,7 +43,7 @@
     "stack.title": "Stack", "stack.lang": "Languages", "stack.data": "Data", "stack.infra": "Infrastructure",
     "stack.obs": "Observability & security", "stack.web": "Web & APIs",
     "contact.title": "Let's talk",
-    "contact.text": "If you like what I do or want to collaborate on one of the projects, reach me on GitHub.",
+    "contact.text": "If you like what I do, have an opportunity or want to collaborate on one of the projects, reach me on LinkedIn.",
     "foot.made": "Handmade, served by GitHub Pages."
   };
 
@@ -60,7 +67,7 @@
       var v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v;
     });
     root.lang = lang;
-    document.title = lang === "en" ? "Alex Nolasco · Software engineer" : esTitle;
+    document.title = lang === "en" ? "Alex Nolasco · Tech Lead, Python & data" : esTitle;
     document.querySelector('meta[name="description"]').content = lang === "en"
       ? "Alex Nolasco: software engineer. Data platforms, infrastructure automation and open source Python tools." : esDesc;
     var b = document.getElementById("lang");
