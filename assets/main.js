@@ -3,13 +3,18 @@
 
   var EN = {
     "skip": "Skip to content",
-    "nav.about": "About", "nav.work": "Experience", "nav.projects": "Projects", "nav.edu": "Education", "nav.stack": "Stack", "nav.contact": "Contact", "nav.cv": "Résumé",
-    "hero.eyebrow": "Tech Lead · Python & data · Palma de Mallorca, Spain",
+    "nav.about": "About", "nav.work": "Experience", "nav.projects": "Projects", "nav.edu": "Education", "nav.stack": "Stack", "nav.contact": "Contact", "nav.cv": "Résumé", "nav.platform": "Platform",
+    "hero.eyebrow": "Tech Lead · Palma de Mallorca, Spain",
     "hero.title": "I build data platforms <span class=\"accent\">that stay up</span> and the tools to run them.",
-    "hero.lead": "I lead the Automation team at Wireless DNA: a distributed data platform for telecommunications, meteorology and IoT. 8+ years turning network data into reliable information. In my spare time I publish open source Python libraries and apps.",
+    "hero.lead": "I lead the Automation team at Wireless DNA: a distributed platform that carries mobile operators' network data from the antenna to the dashboard. 8+ years on it. In my spare time I publish open source Python libraries and apps.",
+    "hero.cv": "See my résumé", "hero.pdfPre": "Résumé ",
+    "facts.since": "since 2018", "facts.eduW": "Two degrees · University of the Balearic Islands", "facts.cert": "Astronomer certification",
+    "band.title": "The platform I lead", "band.lead": "Mobile operators' network data, from the antenna to the dashboard. Each stage in detail is in my résumé.",
+    "sg.red": "Network", "sg.redF": "vendors", "sg.proc": "Processing", "sg.procF": "faster Nokia parser", "sg.data": "Data", "sg.dataF": "parity", "sg.ops": "Operations", "sg.opsF": "MCP tools",
+    "cvc.title": "My résumé, on one page", "cvc.text": "The platform, what I did at each stage, my career and education. In Spanish and English, on the web and as a PDF.", "cvc.open": "Open the résumé",
     "hero.cta1": "See projects",
     "facts.role": "Role", "facts.roleV": "Tech Lead, Automation team", "facts.company": "Company",
-    "facts.focus": "Focus", "facts.focusV": "Data pipelines · Backend · DevOps", "facts.edu": "Education", "facts.eduV": "BSc Telematics Eng. and BSc Mathematics (UIB)",
+    "facts.focus": "Focus", "facts.focusV": "Data pipelines · Backend · DevOps", "facts.edu": "Education", "facts.eduV": "Telematics Engineering and Mathematics",
     "facts.langs": "Languages", "facts.langsV": "Spanish · English",
     "about.title": "About me",
     "about.p1": "I am Tech Lead of the Automation team at Wireless DNA. I make the architecture and stack decisions for a platform that processes telecom network data, weather station feeds and IoT sensor streams, and we own it end to end: code, multi-server deployment and monitoring.",
@@ -27,8 +32,9 @@
     "work.t3": "Network and infrastructure monitoring for telecom clients. After 6 months I moved to the development team thanks to my automation and scripting work.",
     "work.r4": "Big Data Engineer (intern)", "work.d4": "May – Sep 2017",
     "edu.title": "Education", "edu.deg1": "Bachelor's degree in Telematics Engineering", "edu.deg2": "Bachelor's degree in Mathematics",
-    "edu.exch": "Exchange in Computer Engineering", "edu.exchBy": "Universidad de Guadalajara, Mexico · 2018 · Santander scholarship",
-    "edu.cert": "Apache Airflow 3 Fundamentals", "edu.certBy": "Astronomer certification",
+    "edu.exch": "Exchange in Computer Engineering", "edu.exchBy": "Universidad de Guadalajara, Mexico · 2018", "edu.beca": "Santander scholarship",
+    "edu.cert": "Apache Airflow 3 Fundamentals", "edu.certBy": "Astronomer certification · 2025",
+    "edu.lang": "Languages", "edu.langV": "Spanish native · Catalan basic · English basic",
     "work.b1": "<strong>Network data ETL</strong> with Apache Airflow 3 and Celery: reading, transforming and loading counters from several vendors, with native Rust parsers for the largest files.",
     "work.b2": "<strong>Storage</strong> on ClickHouse, MySQL/Percona and PostgreSQL with Patroni, with replication and failover.",
     "work.b3": "<strong>Infrastructure as code</strong>: declarative inventory, Docker containers and deploys with immutable releases, checksum verification and rollback.",
@@ -53,9 +59,10 @@
     "p.skills": "A fast lane for small changes with AI agents: minimal edit, targeted checks, quick review and scoped commits. Agent Skills for Claude Code, Codex and more.",
     "links.demo": "Live demo", "links.docs": "Docs", "links.code": "Code",
     "stack.title": "Stack", "stack.lang": "Languages", "stack.data": "Data", "stack.infra": "Infrastructure",
-    "stack.obs": "Observability & security", "stack.web": "Web & APIs",
+    "stack.obs": "Security", "stack.web": "Web, APIs & AI",
     "contact.title": "Let's talk",
-    "contact.text": "If you like what I do, have an opportunity or want to collaborate on one of the projects, reach me on LinkedIn.",
+    "contact.text": "If you like what I do, have an opportunity or want to collaborate on one of the projects, write to me.",
+    "contact.mail": "Write to me", "contact.cv": "Résumé", "foot.cv": "Résumé",
     "foot.made": "Handmade, served by GitHub Pages."
   };
 
@@ -81,7 +88,9 @@
     root.lang = lang;
     document.title = lang === "en" ? "Alex Nolasco · Tech Lead, Python & data" : esTitle;
     document.querySelector('meta[name="description"]').content = lang === "en"
-      ? "Alex Nolasco: software engineer. Data platforms, infrastructure automation and open source Python tools." : esDesc;
+      ? "Alex Nolasco: Tech Lead of a telecom network data platform. Python, Airflow, ClickHouse and Rust, and open source tools." : esDesc;
+    var pdf = document.getElementById("pdf");
+    if (pdf) pdf.setAttribute("href", lang === "en" ? "assets/cv/CV-Kevin-Nolasco-EN.pdf" : "assets/cv/CV-Kevin-Nolasco-ES.pdf");
     var b = document.getElementById("lang");
     b.textContent = lang === "en" ? "ES" : "EN";
     b.setAttribute("aria-label", lang === "en" ? "Cambiar a español" : "Switch to English");

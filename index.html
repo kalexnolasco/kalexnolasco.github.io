@@ -4,19 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alex Nolasco · Tech Lead, Python y datos</title>
-  <meta name="description" content="Alex Nolasco: ingeniero de software. Plataformas de datos, automatización de infraestructura y herramientas open source en Python.">
+  <meta name="description" content="Alex Nolasco: Tech Lead de una plataforma de datos de red de telecomunicaciones. Python, Airflow, ClickHouse y Rust, y herramientas open source.">
   <meta name="author" content="Kevin Alexander Nolasco Pajuelo">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Alex Nolasco · Tech Lead, Python y datos">
-  <meta property="og:description" content="Plataformas de datos, automatización de infraestructura y herramientas open source en Python.">
+  <meta property="og:description" content="La plataforma que dirijo, mis proyectos open source y mi CV.">
   <meta property="og:url" content="https://kalexnolasco.github.io/">
   <meta property="og:image" content="https://kalexnolasco.github.io/assets/alex.jpg">
   <link rel="canonical" href="https://kalexnolasco.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/cv.css">
+  <link rel="stylesheet" href="assets/home.css">
   <script>
     (function () {
       try {
@@ -26,23 +28,36 @@
     })();
   </script>
 </head>
-<body>
+<body class="cv home">
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="n-cell" viewBox="0 0 24 24"><circle cx="12" cy="8.6" r="1.6"/><path d="M8.8 5.4a4.5 4.5 0 0 0 0 6.4M15.2 5.4a4.5 4.5 0 0 1 0 6.4M6.3 2.9a8 8 0 0 0 0 11.3M17.7 2.9a8 8 0 0 1 0 11.3M12 10.2 8.5 21M12 10.2 15.5 21M9.7 17.3h4.6"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="n-etl" viewBox="0 0 24 24"><path d="M2 12h3M9 12h6M19 12h3M5 9h4v6H5zM15 9h4v6h-4zM20 10l2 2-2 2"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="n-database" viewBox="0 0 24 24"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="n-agent" viewBox="0 0 24 24"><circle cx="12" cy="3" r="1"/><path d="M5 8h14v11H5zM12 4v4M9 12.5h.01M15 12.5h.01M9.5 16h5M2.5 12v3M21.5 12v3"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="n-container" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="i-ch-email" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 6.5L21 7"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="i-globe" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3.2 3.2 3.2 14.8 0 18M12 3c-3.2 3.2-3.2 14.8 0 18"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="i-book" viewBox="0 0 24 24"><path d="M5 4h10a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2zM5 17a2 2 0 0 1 2-2h10M19 7v13"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="i-history" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4M12 8v4l3 2"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></symbol>
+<symbol id="b-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><symbol id="b-pypi" viewBox="0 0 24 24" fill="currentColor"><path d="M23.922 13.58v3.912L20.55 18.72l-.078.055.052.037 3.45-1.256.026-.036v-3.997l-.053-.036-.025.092z M23.621 5.618l-3.04 1.107v3.912l3.339-1.215V5.509zM23.92 13.457V9.544l-3.336 1.215v3.913zM20.47 14.71V10.8L17.17 12v3.913zM17.034 19.996v-3.912l-3.313 1.206v3.912zM17.17 16.057v3.868l3.314-1.206V14.85l-3.314 1.206zm2.093 1.882c-.367.134-.663-.074-.663-.463s.296-.814.663-.947c.365-.133.662.075.662.464s-.297.814-.662.946z M13.225 9.315l.365-.132-3.285-1.197-3.323 1.21.102.037 3.184 1.16zM20.507 10.664V6.751L17.17 7.965v3.913zM17.058 11.918V8.005l-3.302 1.202v3.912zM13.643 9.246l-3.336 1.215v3.913l3.336-1.215zM6.907 13.165l3.322 1.209v-3.913L6.907 9.252z M10.34 7.873l3.281 1.193V5.198l-3.28-1.193zM20.507 2.715L17.19 3.922v3.913l3.317-1.207zM16.95 3.903L13.724 2.73l-3.269 1.19 3.225 1.174zM15.365 4.606l-1.624.592v3.868l3.317-1.207V3.991l-1.693.615zm-.391 2.778c-.367.134-.662-.074-.662-.464s.295-.813.662-.946c.366-.133.663.074.663.464s-.297.813-.663.946z M10.229 18.41v-3.914l-3.322-1.209V17.2zM13.678 17.182v-3.913l-3.371 1.227v3.913z M13.756 17.154l3.3-1.2V12.04l-3.3 1.2zM13.678 21.217l-3.371 1.227v-3.912h-.078v3.912l-3.322-1.209v-3.913l-.053-.058-.025-.06-3.336-1.21v-3.948l.034.013 3.287 1.196.015-.078-3.261-1.187 3.26-1.187v-.109L3.876 9.62l-.307-.112 3.26-1.188v.877l.079-.055V6.769l3.257 1.185.058-.061L7.084 6.75l-.102-.037 3.24-1.179v-.083L6.854 6.677v.018l-.025.018v1.523L3.44 9.47v.02l-.025.017v4.007l-3.39 1.233v.019L0 14.784v3.995l.025.037 3.4 1.237.008-.006.007.01 3.4 1.238.008-.006.006.01 3.4 1.237.014-.009.012.01 3.45-1.256.026-.037-.078-.027zM3.493 9.563l3.257 1.185-3.257 1.187V9.562zM3.4 19.96L.078 18.752v-3.913l2.361.86.96.349v3.913zm.015-3.99L.335 14.85l-.182-.066 3.262-1.187v2.374zm3.399 5.231l-3.321-1.209v-3.912l3.321 1.209v3.912zM23.791 5.434l-3.21-1.17v2.338zM20.387 2.643l-3.24-1.18-3.27 1.19 3.247 1.182z"/></symbol><symbol id="b-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+<symbol fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol><symbol fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></symbol>
+</defs></svg>
   <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
 
   <header class="nav">
     <div class="wrap nav-in">
       <a class="brand" href="#top" aria-label="Inicio"><span class="brand-mark">AN</span><span class="brand-name">Alex Nolasco</span></a>
       <nav class="links" aria-label="Secciones">
-        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="#plataforma" data-i18n="nav.platform">Plataforma</a>
         <a href="#experiencia" data-i18n="nav.work">Experiencia</a>
         <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
         <a href="#formacion" data-i18n="nav.edu">Formación</a>
         <a href="#stack" data-i18n="nav.stack">Stack</a>
-        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-        <a href="cv.html" data-i18n="nav.cv">CV</a>
       </nav>
       <div class="tools">
-        <button class="chip" id="lang" type="button" aria-label="Cambiar idioma">EN</button>
+        <a class="nav-cv" href="cv.html"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="nav.cv">Mi CV</span></a>
+        <button class="chip" id="lang" type="button" aria-label="Switch to English">EN</button>
         <button class="chip icon" id="theme" type="button" aria-label="Cambiar tema">
           <svg class="i-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <svg class="i-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
@@ -54,30 +69,26 @@
   <main id="main">
     <section class="hero wrap" id="top">
       <div class="hero-text">
-        <p class="eyebrow mono" data-i18n="hero.eyebrow">Tech Lead · Python y datos · Palma de Mallorca</p>
+        <p class="eyebrow"><span class="co-chip"><img src="assets/logos/wdna.svg" alt="" width="10" height="15">Wireless DNA</span> <span data-i18n="hero.eyebrow">Tech Lead · Palma de Mallorca</span></p>
         <h1 data-i18n-html="hero.title">Construyo plataformas de datos <span class="accent">que no se caen</span> y las herramientas para operarlas.</h1>
-        <p class="lead" data-i18n="hero.lead">Lidero el equipo de Automatización de Wireless DNA: una plataforma distribuida de datos para telecomunicaciones, meteorología e IoT. Más de 8 años convirtiendo datos de red en información fiable. En mi tiempo libre publico librerías y aplicaciones open source en Python.</p>
+        <p class="lead" data-i18n="hero.lead">Lidero el equipo de Automatización de Wireless DNA: una plataforma distribuida que lleva los datos de red de operadores móviles de la antena al panel. Más de 8 años en ella. En mi tiempo libre publico librerías y aplicaciones open source en Python.</p>
         <div class="cta">
-          <a class="btn primary" href="#proyectos" data-i18n="hero.cta1">Ver proyectos</a>
-          <a class="btn" href="https://www.linkedin.com/in/kalexnolasco/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-            LinkedIn
-          </a>
-          <a class="btn" href="https://github.com/kalexnolasco" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
-            GitHub
-          </a>
+          <a class="btn primary" href="cv.html"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="hero.cv">Ver mi CV</span></a>
+          <a class="btn" id="pdf" href="assets/cv/CV-Kevin-Nolasco-ES.pdf" download><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span><span class="hide-s" data-i18n="hero.pdfPre">CV en </span>PDF</span></a>
+          <a class="btn icon-btn" href="https://www.linkedin.com/in/kalexnolasco/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico brand-li" aria-hidden="true"><use href="#b-linkedin"/></svg><span class="hide-s">LinkedIn</span></a>
+          <a class="btn icon-btn" href="https://github.com/kalexnolasco" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico" aria-hidden="true"><use href="#b-github"/></svg><span class="hide-s">GitHub</span></a>
         </div>
       </div>
       <div class="hero-card">
-        <img class="avatar" src="assets/alex.jpg" alt="Alex Nolasco" width="160" height="160" loading="eager">
-        <dl class="facts">
-          <div><dt data-i18n="facts.role">Rol</dt><dd data-i18n="facts.roleV">Tech Lead, equipo de Automatización</dd></div>
-          <div><dt data-i18n="facts.company">Empresa</dt><dd><a href="https://wdna.com" target="_blank" rel="noopener">Wireless DNA</a></dd></div>
-          <div><dt data-i18n="facts.focus">Foco</dt><dd data-i18n="facts.focusV">Pipelines de datos · Backend · DevOps</dd></div>
-          <div><dt data-i18n="facts.edu">Formación</dt><dd data-i18n="facts.eduV">Grado en Ing. Telemática y Grado en Matemáticas (UIB)</dd></div>
-          <div><dt data-i18n="facts.langs">Idiomas</dt><dd data-i18n="facts.langsV">Español · Inglés</dd></div>
-        </dl>
+        <div class="hero-id">
+          <img class="avatar" src="assets/alex.jpg" alt="Alex Nolasco" width="88" height="88" loading="eager">
+          <div><b>Kevin Alexander Nolasco Pajuelo</b><span class="muted" data-i18n="facts.aka">Alex Nolasco</span></div>
+        </div>
+        <ul class="facts-list">
+          <li><span class="org"><img src="assets/logos/wdna.svg" alt="" width="26" height="40"></span><div><b data-i18n="facts.roleV">Tech Lead, equipo de Automatización</b><span class="muted">Wireless DNA · <span data-i18n="facts.since">desde 2018</span></span></div></li>
+          <li><span class="org"><img src="assets/logos/uib.svg" alt="" width="40" height="40"></span><div><b data-i18n="facts.eduV">Ingeniería Telemática y Matemáticas</b><span class="muted" data-i18n="facts.eduW">Dos grados · Universitat de les Illes Balears</span></span></div></li>
+          <li><span class="org"><img src="assets/logos/airflow.svg" alt="" width="40" height="40"></span><div><b>Apache Airflow 3 Fundamentals</b><span class="muted" data-i18n="facts.cert">Certificación de Astronomer</span></div></li>
+        </ul>
       </div>
     </section>
 
@@ -90,165 +101,260 @@
       <div class="stat"><b>86</b><span data-i18n="st.mcp">herramientas MCP para agentes de IA</span></div>
     </section>
 
+    <section class="stage-band" id="plataforma" aria-labelledby="platform-title">
+      <div class="wrap">
+        <div class="band-head">
+          <h2 id="platform-title"><span data-i18n="band.title">La plataforma que dirijo</span> <span class="emo" aria-hidden="true">🧬</span></h2>
+          <p data-i18n="band.lead">Datos de red de operadores móviles, de la antena al panel. El detalle de cada etapa está en mi CV.</p>
+        </div>
+        <div class="pipeline static" aria-label="Etapas de la plataforma">
+          <div class="stage">
+            <span class="stage-name"><svg class="ico" aria-hidden="true"><use href="#n-cell"/></svg><span data-i18n="sg.red">Red</span></span>
+            <span class="stage-fig"><b>13</b> <span data-i18n="sg.redF">fabricantes</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/ericsson.svg" alt="" width="40" height="40"><span>Ericsson</span></span>
+              <span class="logo"><img src="assets/logos/nokia.svg" alt="" width="40" height="40"><span>Nokia</span></span>
+              <span class="logo"><img src="assets/logos/huawei.svg" alt="" width="40" height="40"><span>Huawei</span></span>
+            </span>
+          </div>
+          <span class="flow" aria-hidden="true"><i></i></span>
+          <div class="stage">
+            <span class="stage-name"><svg class="ico" aria-hidden="true"><use href="#n-etl"/></svg><span data-i18n="sg.proc">Procesamiento</span></span>
+            <span class="stage-fig"><b>40×</b> <span data-i18n="sg.procF">parser Nokia más rápido</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/airflow.svg" alt="" width="40" height="40"><span>Airflow</span></span>
+              <span class="logo"><img src="assets/logos/python.svg" alt="" width="40" height="40"><span>Python</span></span>
+              <span class="logo"><img src="assets/logos/rust.svg" alt="" width="40" height="40"><span>Rust</span></span>
+              <span class="logo"><img src="assets/logos/celery.svg" alt="" width="40" height="40"><span>Celery</span></span>
+            </span>
+          </div>
+          <span class="flow" aria-hidden="true"><i></i></span>
+          <div class="stage">
+            <span class="stage-name"><svg class="ico" aria-hidden="true"><use href="#n-database"/></svg><span data-i18n="sg.data">Datos</span></span>
+            <span class="stage-fig"><b>99,99&nbsp;%</b> <span data-i18n="sg.dataF">paridad</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/clickhouse.svg" alt="" width="40" height="40"><span>ClickHouse</span></span>
+              <span class="logo"><img src="assets/logos/mysql.svg" alt="" width="40" height="40"><span>MySQL</span></span>
+              <span class="logo"><img src="assets/logos/postgresql.svg" alt="" width="40" height="40"><span>PostgreSQL</span></span>
+            </span>
+          </div>
+          <span class="flow" aria-hidden="true"><i></i></span>
+          <div class="stage">
+            <span class="stage-name"><svg class="ico" aria-hidden="true"><use href="#n-agent"/></svg><span data-i18n="sg.ops">Operación</span></span>
+            <span class="stage-fig"><b>86</b> <span data-i18n="sg.opsF">herramientas MCP</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/docker.svg" alt="" width="40" height="40"><span>Docker</span></span>
+              <span class="logo"><img src="assets/logos/opentelemetry.svg" alt="" width="40" height="40"><span title="OpenTelemetry">OTel</span></span>
+              <span class="logo"><img src="assets/logos/grafana.svg" alt="" width="40" height="40"><span>Grafana</span></span>
+              <span class="logo"><img src="assets/logos/keycloak.svg" alt="" width="40" height="40"><span>Keycloak</span></span>
+            </span>
+          </div>
+        </div>
+        <div class="cv-cta">
+          <div>
+            <b data-i18n="cvc.title">Mi CV, en una página</b>
+            <span class="cv-cta-text" data-i18n="cvc.text">La plataforma, lo que hice en cada etapa, la trayectoria y la formación. En español y en inglés, en web y en PDF.</span>
+          </div>
+          <div class="cv-cta-btns">
+            <a class="btn light" href="cv.html"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="cvc.open">Abrir el CV</span></a>
+            <a class="btn ghost" href="assets/cv/CV-Kevin-Nolasco-ES.pdf" download><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>PDF ES</a>
+            <a class="btn ghost" href="assets/cv/CV-Kevin-Nolasco-EN.pdf" download><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>PDF EN</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="wrap section" id="sobre-mi">
-      <h2 class="h2"><span class="num mono">01</span><span data-i18n="about.title">Sobre mí</span></h2>
+      <h2 class="h2"><span class="num mono">01</span><span data-i18n="about.title">Sobre mí</span> <span class="emo" aria-hidden="true">🎯</span></h2>
       <div class="about">
         <p data-i18n="about.p1">Soy Tech Lead del equipo de Automatización de Wireless DNA. Tomo las decisiones de arquitectura y de stack de una plataforma que procesa datos de red de telecomunicaciones, de estaciones meteorológicas y de sensores IoT, y la llevamos de punta a punta: código, despliegue en varios servidores y monitorización.</p>
         <p data-i18n="about.p2">Me importan la estabilidad antes que la velocidad, las decisiones documentadas y las herramientas que hacen que operar un sistema complejo sea aburrido, en el buen sentido.</p>
         <ul class="pillars">
-          <li><strong data-i18n="about.k1">Fiabilidad</strong><span data-i18n="about.v1">Releases inmutables, rollback y alarmas útiles.</span></li>
-          <li><strong data-i18n="about.k2">Automatización</strong><span data-i18n="about.v2">Inventario como código: un despliegue es un comando.</span></li>
-          <li><strong data-i18n="about.k3">Observabilidad</strong><span data-i18n="about.v3">Métricas y logs que responden preguntas reales.</span></li>
+          <li><span class="pi" aria-hidden="true">🛡️</span><strong data-i18n="about.k1">Fiabilidad</strong><span data-i18n="about.v1">Releases inmutables, rollback y alarmas útiles.</span></li>
+          <li><span class="pi" aria-hidden="true">🚀</span><strong data-i18n="about.k2">Automatización</strong><span data-i18n="about.v2">Inventario como código: un despliegue es un comando.</span></li>
+          <li><span class="pi" aria-hidden="true">📈</span><strong data-i18n="about.k3">Observabilidad</strong><span data-i18n="about.v3">Métricas y logs que responden preguntas reales.</span></li>
         </ul>
       </div>
     </section>
 
     <section class="wrap section" id="experiencia">
-      <h2 class="h2"><span class="num mono">02</span><span data-i18n="work.title">Experiencia</span></h2>
+      <h2 class="h2"><span class="num mono">02</span><span data-i18n="work.title">Experiencia</span> <span class="emo" aria-hidden="true">🧑‍💻</span></h2>
       <ol class="timeline">
         <li class="job">
-          <header class="job-head">
-            <h3 data-i18n="work.r1">Tech Lead · Equipo de Automatización</h3>
-            <p class="muted"><a href="https://wdna.com" target="_blank" rel="noopener">Wireless DNA</a> · <span data-i18n="work.d1">mar. 2023 – actualidad</span> · Palma de Mallorca</p>
+          <header class="job-head role">
+            <span class="org"><img src="assets/logos/wdna.svg" alt="" width="26" height="40"></span>
+            <div>
+              <h3 data-i18n="work.r1">Tech Lead · Equipo de Automatización</h3>
+              <p class="muted"><a href="https://wdna.com" target="_blank" rel="noopener">Wireless DNA</a> · <span data-i18n="work.d1">mar. 2023 – actualidad</span> · Palma de Mallorca</p>
+            </div>
           </header>
           <p data-i18n="work.intro">Lidero la plataforma distribuida de procesamiento de datos de WDNA, con foco en telecomunicaciones: datos de rendimiento y configuración de la red de operadores móviles, miles de elementos de red y varios fabricantes.</p>
-          <ul class="bullets">
-            <li data-i18n-html="work.b0"><strong>Arquitectura modular</strong> de la plataforma (telecom, meteorología, IoT y una base común), adoptada como estándar en la empresa.</li>
-            <li data-i18n-html="work.b1"><strong>ETL de datos de red</strong> con Apache Airflow 3 y Celery: lectura, transformación y carga de contadores de varios fabricantes, con parsers nativos en Rust para los ficheros más grandes.</li>
-            <li data-i18n-html="work.b2"><strong>Almacenamiento</strong> en ClickHouse, MySQL/Percona y PostgreSQL con Patroni, con replicación y recuperación ante fallos.</li>
-            <li data-i18n-html="work.b3"><strong>Infraestructura como código</strong>: inventario declarativo, contenedores Docker y despliegues con releases inmutables, verificación por checksum y rollback.</li>
-            <li data-i18n-html="work.b4"><strong>Observabilidad</strong>: OpenTelemetry hacia ClickHouse, paneles propios y en Grafana, y un centro de alarmas con avisos a Teams y correo.</li>
-            <li data-i18n-html="work.b5"><strong>Seguridad y acceso</strong>: inicio de sesión único con Keycloak (OIDC) y un vault de credenciales cifradas.</li>
-            <li data-i18n-html="work.b6"><strong>IA aplicada a operaciones</strong>: 7 servidores MCP de solo lectura (86 herramientas) y un agente de soporte para el NOC que responde con datos reales de producción.</li>
-            <li data-i18n-html="work.b7"><strong>Migración a la versión 4 sin parar el servicio</strong>: 13 fabricantes de RAN, Core y Transporte, validados frente a producción (hasta un 99,99 % de ficheros en un día completo) y documentados en 59 decisiones de arquitectura (ADR).</li>
-            <li data-i18n-html="work.b8"><strong>Rendimiento</strong>: configuración Nokia de 5 a 40 veces más rápida (3G en 50 s frente a 36 min), 3,17 GB de configuración 5G leídos en 47 s, y purgas que pasan de borrados masivos a operaciones instantáneas con particionado.</li>
+          <ul class="ebullets">
+            <li><span class="wi" aria-hidden="true">🧬</span><span data-i18n-html="work.b0"><strong>Arquitectura modular</strong> de la plataforma (telecom, meteorología, IoT y una base común), adoptada como estándar en la empresa.</span></li>
+            <li><span class="wi" aria-hidden="true">🌬️</span><span data-i18n-html="work.b1"><strong>ETL de datos de red</strong> con Apache Airflow 3 y Celery: lectura, transformación y carga de contadores de varios fabricantes, con parsers nativos en Rust para los ficheros más grandes.</span></li>
+            <li><span class="wi" aria-hidden="true">🗃️</span><span data-i18n-html="work.b2"><strong>Almacenamiento</strong> en ClickHouse, MySQL/Percona y PostgreSQL con Patroni, con replicación y recuperación ante fallos.</span></li>
+            <li><span class="wi" aria-hidden="true">🐳</span><span data-i18n-html="work.b3"><strong>Infraestructura como código</strong>: inventario declarativo, contenedores Docker y despliegues con releases inmutables, verificación por checksum y rollback.</span></li>
+            <li><span class="wi" aria-hidden="true">📈</span><span data-i18n-html="work.b4"><strong>Observabilidad</strong>: OpenTelemetry hacia ClickHouse, paneles propios y en Grafana, y un centro de alarmas con avisos a Teams y correo.</span></li>
+            <li><span class="wi" aria-hidden="true">🪪</span><span data-i18n-html="work.b5"><strong>Seguridad y acceso</strong>: inicio de sesión único con Keycloak (OIDC) y un vault de credenciales cifradas.</span></li>
+            <li><span class="wi" aria-hidden="true">🤖</span><span data-i18n-html="work.b6"><strong>IA aplicada a operaciones</strong>: 7 servidores MCP de solo lectura (86 herramientas) y un agente de soporte para el NOC que responde con datos reales de producción.</span></li>
+            <li><span class="wi" aria-hidden="true">⚖️</span><span data-i18n-html="work.b7"><strong>Migración a la versión 4 sin parar el servicio</strong>: 13 fabricantes de RAN, Core y Transporte, validados frente a producción (hasta un 99,99 % de ficheros en un día completo) y documentados en 59 decisiones de arquitectura (ADR).</span></li>
+            <li><span class="wi" aria-hidden="true">⚙️</span><span data-i18n-html="work.b8"><strong>Rendimiento</strong>: configuración Nokia de 5 a 40 veces más rápida (3G en 50 s frente a 36 min), 3,17 GB de configuración 5G leídos en 47 s, y purgas que pasan de borrados masivos a operaciones instantáneas con particionado.</span></li>
           </ul>
           <ul class="tags">
             <li>Python</li><li>asyncio</li><li>Airflow</li><li>Celery</li><li>Rust</li><li>ClickHouse</li><li>MySQL</li><li>PostgreSQL</li><li>RabbitMQ</li><li>Docker</li><li>Keycloak</li><li>OpenTelemetry</li>
           </ul>
         </li>
         <li class="job">
-          <header class="job-head">
-            <h3 data-i18n="work.r2">Ingeniero de software · Datos y automatización</h3>
-            <p class="muted">Wireless DNA · <span data-i18n="work.d2">feb. 2019 – feb. 2023</span> · ParcBit</p>
+          <header class="job-head role">
+            <span class="org"><img src="assets/logos/wdna.svg" alt="" width="26" height="40"></span>
+            <div>
+              <h3 data-i18n="work.r2">Ingeniero de software · Datos y automatización</h3>
+              <p class="muted">Wireless DNA · <span data-i18n="work.d2">feb. 2019 – feb. 2023</span> · ParcBit</p>
+            </div>
           </header>
           <p data-i18n="work.t2">Pipelines ETL para datos de redes de telecomunicaciones desde múltiples fuentes (SNMP, SFTP, bases relacionales y de series temporales), automatización de servidores y servicios con Python y Bash, contenedores Docker y librerías compartidas de acceso a datos, credenciales y monitorización.</p>
         </li>
         <li class="job">
-          <header class="job-head">
-            <h3 data-i18n="work.r3">Ingeniero de operaciones</h3>
-            <p class="muted">Wireless DNA · <span data-i18n="work.d3">ago. 2018 – ene. 2019</span></p>
+          <header class="job-head role">
+            <span class="org"><img src="assets/logos/wdna.svg" alt="" width="26" height="40"></span>
+            <div>
+              <h3 data-i18n="work.r3">Ingeniero de operaciones</h3>
+              <p class="muted">Wireless DNA · <span data-i18n="work.d3">ago. 2018 – ene. 2019</span></p>
+            </div>
           </header>
           <p data-i18n="work.t3">Monitorización de red e infraestructura para clientes de telecomunicaciones. A los 6 meses pasé al equipo de desarrollo por mi trabajo en automatización y scripting.</p>
         </li>
         <li class="job">
-          <header class="job-head">
-            <h3 data-i18n="work.r4">Big Data Engineer (prácticas)</h3>
-            <p class="muted">XML Travelgate · <span data-i18n="work.d4">may. – sept. 2017</span></p>
+          <header class="job-head role">
+            <span class="org"><img src="assets/logos/travelgate.png" alt="" width="40" height="40"></span>
+            <div>
+              <h3 data-i18n="work.r4">Big Data Engineer (prácticas)</h3>
+              <p class="muted">XML Travelgate · <span data-i18n="work.d4">may. – sept. 2017</span> · Palma</p>
+            </div>
           </header>
         </li>
       </ol>
       <h3 class="h3" data-i18n="dom.title">Ámbitos en los que he trabajado</h3>
       <div class="domains">
-        <div class="domain"><b data-i18n="dom.t1">Telecomunicaciones</b><span data-i18n="dom.d1">ETL de rendimiento, configuración y alarmas de operadores móviles; herramientas de capacidad para RAN, Core y Transporte; detección de anomalías y previsión.</span></div>
-        <div class="domain"><b data-i18n="dom.t2">Meteorología</b><span data-i18n="dom.d2">Estaciones meteorológicas, radar, satélite y observaciones no convencionales; motor de previsión y apps de meteo.</span></div>
-        <div class="domain"><b data-i18n="dom.t3">IoT y ciudad inteligente</b><span data-i18n="dom.d3">Gestión de residuos con 5G, sensores, SmartWorld y plataformas de dispositivos conectados.</span></div>
-        <div class="domain"><b data-i18n="dom.t4">Plataforma interna</b><span data-i18n="dom.d4">Pasarela de comunicaciones, monitorización, consola de operación, intranet y herramientas de desarrollo.</span></div>
+        <div class="domain"><span class="pi" aria-hidden="true">📡</span><b data-i18n="dom.t1">Telecomunicaciones</b><span data-i18n="dom.d1">ETL de rendimiento, configuración y alarmas de operadores móviles; herramientas de capacidad para RAN, Core y Transporte; detección de anomalías y previsión.</span></div>
+        <div class="domain"><span class="pi" aria-hidden="true">🌦️</span><b data-i18n="dom.t2">Meteorología</b><span data-i18n="dom.d2">Estaciones meteorológicas, radar, satélite y observaciones no convencionales; motor de previsión y apps de meteo.</span></div>
+        <div class="domain"><span class="pi" aria-hidden="true">🏙️</span><b data-i18n="dom.t3">IoT y ciudad inteligente</b><span data-i18n="dom.d3">Gestión de residuos con 5G, sensores, SmartWorld y plataformas de dispositivos conectados.</span></div>
+        <div class="domain"><span class="pi" aria-hidden="true">🧩</span><b data-i18n="dom.t4">Plataforma interna</b><span data-i18n="dom.d4">Pasarela de comunicaciones, monitorización, consola de operación, intranet y herramientas de desarrollo.</span></div>
       </div>
     </section>
 
     <section class="wrap section" id="proyectos">
-      <h2 class="h2"><span class="num mono">03</span><span data-i18n="projects.title">Proyectos open source</span></h2>
+      <h2 class="h2"><span class="num mono">03</span><span data-i18n="projects.title">Proyectos open source</span> <span class="emo" aria-hidden="true">📦</span></h2>
       <div class="grid">
         <article class="card featured" data-repo="webgate">
           <div class="card-top">
+            <span class="org ink"><svg class="ico" aria-hidden="true"><use href="#b-github"/></svg></span>
             <h3><a href="https://github.com/kalexnolasco/webgate" target="_blank" rel="noopener">webgate</a></h3>
+            <span class="tag"><svg class="ico" aria-hidden="true"><use href="#b-pypi"/></svg>PyPI</span>
             <span class="stars mono" title="GitHub stars">★ <b>4</b></span>
           </div>
           <p data-i18n="p.webgate">Pasarela web autoalojada para administrar servidores: terminal SSH, explorador SFTP, registro de servidores con jump hosts, sesiones compartidas en directo, grabación de sesiones, LDAP/AD, 2FA y despliegue en alta disponibilidad.</p>
           <ul class="tags"><li>FastAPI</li><li>xterm.js</li><li>asyncssh</li><li>Docker</li><li>LDAP</li></ul>
           <div class="card-links">
-            <a href="https://webgate-demo.fly.dev/" target="_blank" rel="noopener" data-i18n="links.demo">Demo en vivo</a>
-            <a href="https://kalexnolasco.github.io/webgate/" target="_blank" rel="noopener" data-i18n="links.docs">Documentación</a>
-            <a href="https://pypi.org/project/webgate/" target="_blank" rel="noopener">PyPI</a>
+            <a href="https://webgate-demo.fly.dev/" target="_blank" rel="noopener"><span data-i18n="links.demo">Demo en vivo</span> ↗</a>
+            <a href="https://kalexnolasco.github.io/webgate/" target="_blank" rel="noopener"><span data-i18n="links.docs">Documentación</span> ↗</a>
+            <a href="https://pypi.org/project/webgate/" target="_blank" rel="noopener">PyPI ↗</a>
           </div>
         </article>
 
         <article class="card" data-repo="systemd-client">
           <div class="card-top">
+            <span class="org ink"><svg class="ico" aria-hidden="true"><use href="#b-github"/></svg></span>
             <h3><a href="https://github.com/kalexnolasco/systemd-client" target="_blank" rel="noopener">systemd-client</a></h3>
+            <span class="tag"><svg class="ico" aria-hidden="true"><use href="#b-pypi"/></svg>PyPI</span>
             <span class="stars mono" title="GitHub stars">★ <b>2</b></span>
           </div>
           <p data-i18n="p.systemd">Librería de Python para systemd: servicios, unidades, journal, límites de recursos y análisis de seguridad. Asíncrona con envoltorios síncronos, backend D-Bus opcional, CLI y una TUI en Rust.</p>
           <ul class="tags"><li>Python</li><li>asyncio</li><li>D-Bus</li><li>Ratatui</li></ul>
           <div class="card-links">
-            <a href="https://kalexnolasco.github.io/systemd-client/" target="_blank" rel="noopener" data-i18n="links.docs">Documentación</a>
-            <a href="https://pypi.org/project/systemd-client/" target="_blank" rel="noopener">PyPI</a>
+            <a href="https://kalexnolasco.github.io/systemd-client/" target="_blank" rel="noopener"><span data-i18n="links.docs">Documentación</span> ↗</a>
+            <a href="https://pypi.org/project/systemd-client/" target="_blank" rel="noopener">PyPI ↗</a>
           </div>
         </article>
 
         <article class="card" data-repo="ironflet">
           <div class="card-top">
+            <span class="org ink"><svg class="ico" aria-hidden="true"><use href="#b-github"/></svg></span>
             <h3><a href="https://github.com/kalexnolasco/ironflet" target="_blank" rel="noopener">IronFlet</a></h3>
             <span class="stars mono" title="GitHub stars">★ <b>1</b></span>
           </div>
           <p data-i18n="p.ironflet">Registro de entrenamiento de fuerza, offline y bilingüe: 7 rutinas periodizadas y 68 ejercicios con imágenes animadas. Un único código Python que corre como APK de Android, escritorio y web.</p>
           <ul class="tags"><li>Python</li><li>Flet</li><li>Flutter</li><li>Android</li></ul>
           <div class="card-links">
-            <a href="https://github.com/kalexnolasco/ironflet" target="_blank" rel="noopener" data-i18n="links.code">Código</a>
+            <a href="https://github.com/kalexnolasco/ironflet" target="_blank" rel="noopener"><span data-i18n="links.code">Código</span> ↗</a>
           </div>
         </article>
 
         <article class="card" data-repo="small-change-skills">
           <div class="card-top">
+            <span class="org ink"><svg class="ico" aria-hidden="true"><use href="#b-github"/></svg></span>
             <h3><a href="https://github.com/kalexnolasco/small-change-skills" target="_blank" rel="noopener">small-change-skills</a></h3>
             <span class="stars mono" title="GitHub stars">★ <b>0</b></span>
           </div>
           <p data-i18n="p.skills">Un carril rápido para cambios pequeños con agentes de IA: edición mínima, comprobaciones dirigidas, revisión breve y commits acotados. Agent Skills para Claude Code, Codex y otros.</p>
           <ul class="tags"><li>Agent Skills</li><li>Claude Code</li><li>Codex</li><li>Git</li></ul>
           <div class="card-links">
-            <a href="https://github.com/kalexnolasco/small-change-skills" target="_blank" rel="noopener" data-i18n="links.code">Código</a>
+            <a href="https://github.com/kalexnolasco/small-change-skills" target="_blank" rel="noopener"><span data-i18n="links.code">Código</span> ↗</a>
           </div>
         </article>
       </div>
     </section>
 
     <section class="wrap section" id="formacion">
-      <h2 class="h2"><span class="num mono">04</span><span data-i18n="edu.title">Formación</span></h2>
+      <h2 class="h2"><span class="num mono">04</span><span data-i18n="edu.title">Formación</span> <span class="emo" aria-hidden="true">🎓</span></h2>
       <div class="edu">
-        <div class="edu-item"><h3 data-i18n="edu.deg1">Grado en Ingeniería Telemática</h3><p class="muted">Universitat de les Illes Balears (UIB) · 2013 – 2020</p></div>
-        <div class="edu-item"><h3 data-i18n="edu.deg2">Grado en Matemáticas</h3><p class="muted">Universitat de les Illes Balears (UIB) · 2013 – 2020</p></div>
-        <div class="edu-item"><h3 data-i18n="edu.exch">Intercambio en Ingeniería Informática</h3><p class="muted" data-i18n="edu.exchBy">Universidad de Guadalajara, México · 2018 · Beca Santander</p></div>
-        <div class="edu-item"><h3 data-i18n="edu.cert">Apache Airflow 3 Fundamentals</h3><p class="muted" data-i18n="edu.certBy">Certificación de Astronomer</p></div>
+        <div class="edu-item item"><span class="org"><img src="assets/logos/uib.svg" alt="" width="40" height="40"></span><div><h3 data-i18n="edu.deg1">Grado en Ingeniería Telemática</h3><p class="muted">Universitat de les Illes Balears (UIB) · 2013 – 2020</p></div></div>
+        <div class="edu-item item"><span class="org"><img src="assets/logos/uib.svg" alt="" width="40" height="40"></span><div><h3 data-i18n="edu.deg2">Grado en Matemáticas</h3><p class="muted">Universitat de les Illes Balears (UIB) · 2013 – 2020</p></div></div>
+        <div class="edu-item item"><span class="org"><img src="assets/logos/udg.jpg" alt="" width="40" height="40"></span><div><h3 data-i18n="edu.exch">Intercambio en Ingeniería Informática</h3><p class="muted" data-i18n="edu.exchBy">Universidad de Guadalajara, México · 2018</p><span class="tag"><img src="assets/logos/santander.svg" alt="" width="14" height="14"><span data-i18n="edu.beca">Beca Santander</span></span></div></div>
+        <div class="edu-item item"><span class="org"><img src="assets/logos/airflow.svg" alt="" width="40" height="40"></span><div><h3>Apache Airflow 3 Fundamentals</h3><p class="muted" data-i18n="edu.certBy">Certificación de Astronomer · 2025</p></div></div>
+        <div class="edu-item item wide"><span class="org ink"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></span><div><h3 data-i18n="edu.lang">Idiomas</h3><p class="muted" data-i18n="edu.langV">Español nativo · Catalán básico · Inglés básico</p></div></div>
       </div>
     </section>
 
     <section class="wrap section" id="stack">
-      <h2 class="h2"><span class="num mono">05</span><span data-i18n="stack.title">Stack</span></h2>
+      <h2 class="h2"><span class="num mono">05</span><span data-i18n="stack.title">Stack</span> <span class="emo" aria-hidden="true">⚙️</span></h2>
+      <div class="logo-wall">
+        <span class="lw"><img src="assets/logos/python.svg" alt="" width="40" height="40"><span>Python</span></span>
+        <span class="lw"><img src="assets/logos/rust.svg" alt="" width="40" height="40"><span>Rust</span></span>
+        <span class="lw"><img src="assets/logos/airflow.svg" alt="" width="40" height="40"><span>Airflow</span></span>
+        <span class="lw"><img src="assets/logos/celery.svg" alt="" width="40" height="40"><span>Celery</span></span>
+        <span class="lw"><img src="assets/logos/polars.svg" alt="" width="40" height="40"><span>Polars</span></span>
+        <span class="lw"><img src="assets/logos/clickhouse.svg" alt="" width="40" height="40"><span>ClickHouse</span></span>
+        <span class="lw"><img src="assets/logos/mysql.svg" alt="" width="40" height="40"><span>MySQL</span></span>
+        <span class="lw"><img src="assets/logos/postgresql.svg" alt="" width="40" height="40"><span>PostgreSQL</span></span>
+        <span class="lw"><img src="assets/logos/rabbitmq.svg" alt="" width="40" height="40"><span>RabbitMQ</span></span>
+        <span class="lw"><img src="assets/logos/docker.svg" alt="" width="40" height="40"><span>Docker</span></span>
+        <span class="lw"><img src="assets/logos/opentelemetry.svg" alt="" width="40" height="40"><span>OpenTelemetry</span></span>
+        <span class="lw"><img src="assets/logos/grafana.svg" alt="" width="40" height="40"><span>Grafana</span></span>
+        <span class="lw"><img src="assets/logos/keycloak.svg" alt="" width="40" height="40"><span>Keycloak</span></span>
+      </div>
       <div class="stack">
         <div><h3 data-i18n="stack.lang">Lenguajes</h3><ul class="tags"><li>Python</li><li>Rust</li><li>SQL</li><li>Bash</li><li>JavaScript</li></ul></div>
-        <div><h3 data-i18n="stack.data">Datos</h3><ul class="tags"><li>Apache Airflow</li><li>Celery</li><li>ClickHouse</li><li>MySQL / Percona</li><li>PostgreSQL</li><li>Polars</li></ul></div>
-        <div><h3 data-i18n="stack.infra">Infraestructura</h3><ul class="tags"><li>Docker</li><li>Linux / systemd</li><li>RabbitMQ</li><li>HAProxy / nginx</li><li>Pulumi</li><li>GitLab CI</li></ul></div>
-        <div><h3 data-i18n="stack.obs">Observabilidad y seguridad</h3><ul class="tags"><li>OpenTelemetry</li><li>Grafana</li><li>Keycloak / OIDC</li><li>LDAP</li></ul></div>
-        <div><h3 data-i18n="stack.web">Web y APIs</h3><ul class="tags"><li>FastAPI</li><li>xterm.js</li><li>Flet</li><li>MCP</li></ul></div>
+        <div><h3 data-i18n="stack.infra">Infraestructura</h3><ul class="tags"><li>Linux / systemd</li><li>HAProxy / nginx</li><li>Pulumi</li><li>GitLab CI</li><li>Patroni</li></ul></div>
+        <div><h3 data-i18n="stack.obs">Seguridad</h3><ul class="tags"><li>Keycloak / OIDC</li><li>LDAP</li><li>2FA</li></ul></div>
+        <div><h3 data-i18n="stack.web">Web, APIs e IA</h3><ul class="tags"><li>FastAPI</li><li>xterm.js</li><li>Flet</li><li>MCP</li><li>Claude Code</li></ul></div>
       </div>
     </section>
 
-    <section class="wrap section" id="contacto">
-      <div class="contact">
-        <h2 class="h2 plain" data-i18n="contact.title">¿Hablamos?</h2>
-        <p data-i18n="contact.text">Si te interesa lo que hago, tienes una oportunidad o quieres colaborar en alguno de los proyectos, escríbeme por LinkedIn.</p>
-        <div class="cta">
-          <a class="btn primary" href="https://www.linkedin.com/in/kalexnolasco/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/kalexnolasco" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://wdna.com" target="_blank" rel="noopener">wdna.com</a>
-        </div>
+    <section class="wrap section close" id="contacto">
+      <h2 data-i18n="contact.title">¿Hablamos?</h2>
+      <p class="close-text" data-i18n="contact.text">Si te interesa lo que hago, tienes una oportunidad o quieres colaborar en alguno de los proyectos, escríbeme.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:kalex.nolasco@gmail.com"><svg class="ico" aria-hidden="true"><use href="#i-ch-email"/></svg><span data-i18n="contact.mail">Escríbeme</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/kalexnolasco/" target="_blank" rel="noopener"><svg class="ico brand-li" aria-hidden="true"><use href="#b-linkedin"/></svg>LinkedIn</a>
+        <a class="btn" href="https://github.com/kalexnolasco" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#b-github"/></svg>GitHub</a>
+        <a class="btn" href="cv.html"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="contact.cv">Mi CV</span></a>
       </div>
     </section>
   </main>
 
   <footer class="wrap foot">
-    <p class="muted mono">© <span id="year">2026</span> Alex Nolasco · <span data-i18n="foot.made">Hecho a mano, servido por GitHub Pages.</span></p>
+    <p class="muted foot-line">© <span id="year">2026</span> Alex Nolasco · <a href="cv.html" data-i18n="foot.cv">Currículum</a> · <span data-i18n="foot.made">Hecho a mano, servido por GitHub Pages.</span></p>
   </footer>
 
   <script src="assets/main.js" defer></script>
