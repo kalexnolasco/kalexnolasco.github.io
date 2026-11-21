@@ -8,6 +8,15 @@
   --flow: #2dd4bf;
 }
 ::selection { background: var(--accent-soft); color: var(--text); }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ico { width: 1.15em; height: 1.15em; flex: none; vertical-align: -.2em; }
+.btn .ico { margin-right: 2px; }
+.brand-li { color: #0a66c2; }
+:root[data-theme="dark"] .brand-li { color: #70b5f9; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand-li { color: #70b5f9; } }
+.emo { font-size: .82em; margin-left: 4px; }
+.who-co { display: inline-flex; align-items: center; gap: 6px; margin-left: 10px; padding-left: 12px; border-left: 1px solid var(--line); color: var(--text); font-weight: 600; }
+.who-co img { width: 12px; height: 18px; }
 
 /* Who: name and actions on one line */
 .who { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; padding: 44px 0 30px; }
@@ -35,7 +44,8 @@
 .stage:hover { border-color: #3a434e; transform: translateY(-2px); }
 .stage:focus-visible { outline: 2px solid var(--flow); outline-offset: 3px; }
 .stage[aria-pressed="true"] { border-color: var(--flow); background: #0f1d1c; transform: translateY(-3px); box-shadow: 0 14px 30px -12px rgba(0,0,0,.7); }
-.stage-name { font-weight: 600; font-size: 14px; color: var(--ink-muted); }
+.stage-name { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: 14px; color: var(--ink-muted); }
+.stage-name .ico { width: 20px; height: 20px; color: var(--flow); }
 .stage[aria-pressed="true"] .stage-name { color: var(--flow); }
 .stage-fig { font-size: 14px; color: var(--ink-muted); line-height: 1.1; }
 .stage-fig b { display: block; font-size: 34px; font-weight: 700; letter-spacing: -1px; color: #fff; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
@@ -53,12 +63,12 @@
 
 /* Achievements: the selected stage's light up */
 .wins { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px 28px; }
-.wins li { position: relative; padding: 10px 0 10px 18px; border-top: 1px solid var(--ink-line); font-size: 15px; line-height: 1.5; color: #c9ced6; transition: opacity .25s, color .25s; }
-.wins li::before { content: ""; position: absolute; left: 0; top: 18px; width: 7px; height: 7px; border-radius: 2px; background: var(--ink-line); transition: background .25s; }
+.wins li { position: relative; display: flex; gap: 10px; padding: 10px 0; border-top: 1px solid var(--ink-line); font-size: 15px; line-height: 1.5; color: #c9ced6; transition: opacity .25s, color .25s; }
+.wi { flex: none; width: 22px; font-size: 16px; line-height: 1.45; text-align: center; transition: filter .25s; }
 .wins li b { color: #fff; font-weight: 600; }
 .pipeline.has-pick ~ .wins li { opacity: .28; }
 .pipeline.has-pick ~ .wins li.on { opacity: 1; color: #fff; }
-.pipeline.has-pick ~ .wins li.on::before { background: var(--flow); }
+.pipeline.has-pick ~ .wins li:not(.on) .wi { filter: grayscale(1); }
 .band-foot { margin: 26px 0 0; color: var(--ink-muted); font-size: 14px; }
 
 /* Career */
@@ -68,12 +78,21 @@
 .career .when { font-size: 14px; color: var(--muted); padding-top: 3px; font-variant-numeric: tabular-nums; }
 .career li:first-child .when { color: var(--accent); font-weight: 600; }
 .career h3 { margin: 0 0 4px; font-size: 18px; }
+.role, .item { display: flex; gap: 14px; align-items: flex-start; }
+.org { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 11px; background: #fff; border: 1px solid var(--line); overflow: hidden; }
+.org img { width: 30px; height: 30px; object-fit: contain; }
+.org.ink { background: var(--text); color: var(--bg); border-color: transparent; }
+.org.ink .ico { width: 24px; height: 24px; }
+.item > div { display: grid; gap: 2px; }
+.tag { display: inline-flex; align-items: center; gap: 5px; width: fit-content; margin-top: 4px; padding: 2px 8px; border: 1px solid var(--line); border-radius: 999px; font-size: 12.5px; color: var(--muted); }
+.tag img, .tag .ico { width: 14px; height: 14px; }
 .career p { margin: 0; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .split .h2 { font-size: 24px; }
-.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
 .plain li { display: grid; gap: 2px; }
+.plain li.item { display: flex; gap: 14px; }
 .plain a b { color: var(--text); }
 
 .close { text-align: center; }
@@ -101,7 +120,9 @@
 @keyframes travel-v { from { top: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } to { top: calc(100% - 10px); opacity: 0; } }
 @media (max-width: 560px) {
   .who { padding-top: 30px; }
-  .who-place { display: block; margin: 6px 0 0; padding: 0; border: 0; }
+  .who-place, .who-co { margin: 6px 0 0; padding: 0; border: 0; }
+  .who-place { display: block; }
+  .who-co { display: flex; }
   .career li { grid-template-columns: 1fr; gap: 4px; }
   .close .cta { flex-direction: column; align-items: stretch; max-width: 360px; margin: 0 auto; }
 }
@@ -134,8 +155,15 @@
   .logo img { width: 26px; height: 26px; padding: 4px; box-shadow: none; border: 1px solid #e5e5e5; }
   .logo span { font-size: 8px !important; }
   .wins { grid-template-columns: 1fr 1fr; gap: 0 18px; margin-top: 10px; }
-  .wins li { color: #333; opacity: 1 !important; border-color: #e5e5e5; padding: 3px 0 3px 14px; font-size: 10px; line-height: 1.4; }
-  .wins li::before { top: 8px; background: #0f766e; }
+  .wins li { color: #333; opacity: 1 !important; border-color: #e5e5e5; padding: 3px 0; gap: 6px; font-size: 10px; line-height: 1.4; }
+  .wi { font-size: 11px; width: 14px; }
+  .org { width: 26px; height: 26px; border-radius: 6px; }
+  .org img { width: 18px; height: 18px; }
+  .org.ink { background: #111; color: #fff; }
+  .org.ink .ico { width: 15px; height: 15px; }
+  .role, .item { gap: 8px; }
+  .tag { font-size: 9px; margin-top: 1px; padding: 0 6px; }
+  .emo { display: none; }
   .wins li b { color: #111; }
   .band-foot, .career .when, .plain .muted, .career .muted { font-size: 10.5px; }
   .band-foot { margin-top: 8px; }
