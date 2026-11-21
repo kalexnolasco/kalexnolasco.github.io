@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Nolasco · CV</title>
+  <meta name="description" content="Currículum de Kevin Alexander Nolasco Pajuelo: Tech Lead de una plataforma de datos de red de telecomunicaciones. Python, Airflow, ClickHouse y Rust.">
+  <meta name="author" content="Kevin Alexander Nolasco Pajuelo">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Alex Nolasco · CV · Tech Lead, Python y plataformas de datos">
+  <meta property="og:description" content="La plataforma que dirijo, lo que he hecho en ella y cómo contactarme.">
+  <meta property="og:url" content="https://kalexnolasco.github.io/cv.html">
+  <meta property="og:image" content="https://kalexnolasco.github.io/assets/alex.jpg">
+  <link rel="canonical" href="https://kalexnolasco.github.io/cv.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/cv.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="cv">
+  <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="index.html" aria-label="Portafolio"><span class="brand-mark">AN</span><span class="brand-name">Alex Nolasco</span></a>
+      <nav class="links" aria-label="Secciones">
+        <a href="#plataforma" data-i18n="nav.platform">Plataforma</a>
+        <a href="#trayectoria" data-i18n="nav.career">Trayectoria</a>
+        <a href="#formacion" data-i18n="nav.edu">Formación</a>
+        <a href="index.html" data-i18n="nav.portfolio">Portafolio</a>
+      </nav>
+      <div class="tools">
+        <button class="chip" id="lang" type="button" aria-label="Switch to English">EN</button>
+        <button class="chip icon" id="theme" type="button" aria-label="Cambiar tema">
+          <svg class="i-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="who wrap" aria-labelledby="name">
+      <div class="who-text">
+        <h1 id="name">Kevin Alexander <b>Nolasco Pajuelo</b></h1>
+        <p class="who-role"><span data-i18n="who.role">Tech Lead · Python y plataformas de datos</span> <span class="who-place" data-i18n="who.place">Palma de Mallorca</span></p>
+        <p class="print-only">kalex.nolasco@gmail.com · linkedin.com/in/kalexnolasco · kalexnolasco.github.io</p>
+      </div>
+      <div class="who-actions">
+        <a class="btn primary" href="mailto:kalex.nolasco@gmail.com" data-i18n="who.mail">Escríbeme</a>
+        <a class="btn" href="https://www.linkedin.com/in/kalexnolasco" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" id="pdf" href="assets/cv/CV-Kevin-Nolasco-ES.pdf" download>
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>PDF</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="stage-band" id="plataforma" aria-labelledby="platform-title">
+      <div class="wrap">
+        <div class="band-head">
+          <h2 id="platform-title" data-i18n="band.title">La plataforma que dirijo</h2>
+          <p data-i18n="band.lead">Datos de red de operadores móviles, de la antena al panel. Toca una etapa para ver lo que hice en ella.</p>
+        </div>
+
+        <div class="pipeline" role="group" aria-label="Etapas de la plataforma">
+          <button class="stage" type="button" data-stage="red" aria-pressed="false">
+            <span class="stage-name" data-i18n="st.red">Red</span>
+            <span class="stage-fig"><b>13</b> <span data-i18n="st.redF">fabricantes</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/ericsson.svg" alt="" width="40" height="40"><span>Ericsson</span></span>
+              <span class="logo"><img src="assets/logos/nokia.svg" alt="" width="40" height="40"><span>Nokia</span></span>
+              <span class="logo"><img src="assets/logos/huawei.svg" alt="" width="40" height="40"><span>Huawei</span></span>
+            </span>
+          </button>
+          <span class="flow" aria-hidden="true"><i></i></span>
+          <button class="stage" type="button" data-stage="proc" aria-pressed="false">
+            <span class="stage-name" data-i18n="st.proc">Procesamiento</span>
+            <span class="stage-fig"><b>40×</b> <span data-i18n="st.procF">parser Nokia más rápido</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/airflow.svg" alt="" width="40" height="40"><span>Airflow</span></span>
+              <span class="logo"><img src="assets/logos/python.svg" alt="" width="40" height="40"><span>Python</span></span>
+              <span class="logo"><img src="assets/logos/rust.svg" alt="" width="40" height="40"><span>Rust</span></span>
+              <span class="logo"><img src="assets/logos/celery.svg" alt="" width="40" height="40"><span>Celery</span></span>
+            </span>
+          </button>
+          <span class="flow" aria-hidden="true"><i></i></span>
+          <button class="stage" type="button" data-stage="data" aria-pressed="false">
+            <span class="stage-name" data-i18n="st.data">Datos</span>
+            <span class="stage-fig"><b>99,99&nbsp;%</b> <span data-i18n="st.dataF">paridad</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/clickhouse.svg" alt="" width="40" height="40"><span>ClickHouse</span></span>
+              <span class="logo"><img src="assets/logos/mysql.svg" alt="" width="40" height="40"><span>MySQL</span></span>
+              <span class="logo"><img src="assets/logos/postgresql.svg" alt="" width="40" height="40"><span>PostgreSQL</span></span>
+            </span>
+          </button>
+          <span class="flow" aria-hidden="true"><i></i></span>
+          <button class="stage" type="button" data-stage="ops" aria-pressed="false">
+            <span class="stage-name" data-i18n="st.ops">Operación</span>
+            <span class="stage-fig"><b>86</b> <span data-i18n="st.opsF">herramientas MCP</span></span>
+            <span class="logos">
+              <span class="logo"><img src="assets/logos/docker.svg" alt="" width="40" height="40"><span>Docker</span></span>
+              <span class="logo"><img src="assets/logos/opentelemetry.svg" alt="" width="40" height="40"><span title="OpenTelemetry">OTel</span></span>
+              <span class="logo"><img src="assets/logos/grafana.svg" alt="" width="40" height="40"><span>Grafana</span></span>
+              <span class="logo"><img src="assets/logos/keycloak.svg" alt="" width="40" height="40"><span>Keycloak</span></span>
+            </span>
+          </button>
+        </div>
+
+        <ul class="wins" aria-live="polite">
+          <li data-stage="all" data-i18n-html="w.arch">Diseñé la <b>arquitectura modular</b> de la plataforma, hoy estándar de la empresa.</li>
+          <li data-stage="red" data-i18n-html="w.red">Lectura de <b>13 fabricantes</b> de RAN, Core y Transporte por SFTP, SNMP y bases de datos.</li>
+          <li data-stage="proc" data-i18n-html="w.airflow">ETL en <b>Airflow 3</b> y Celery: un clúster para varios dominios de red, con colas por dominio.</li>
+          <li data-stage="proc" data-i18n-html="w.rust">Parsers nativos en <b>Rust</b>: configuración Nokia de 36 min a 50 s.</li>
+          <li data-stage="data" data-i18n-html="w.v4">Migración a <b>v4 sin cortes</b>, validada contra producción: 99,99&nbsp;% de paridad.</li>
+          <li data-stage="data" data-i18n-html="w.db"><b>ClickHouse</b>, MySQL/Percona y PostgreSQL con Patroni, con réplicas y failover.</li>
+          <li data-stage="ops" data-i18n-html="w.deploy"><b>Releases inmutables</b>: despliegue y vuelta atrás en un comando sobre decenas de servidores.</li>
+          <li data-stage="ops" data-i18n-html="w.obs">Observabilidad con <b>OpenTelemetry</b> y acceso único con <b>Keycloak</b>.</li>
+          <li data-stage="ops" data-i18n-html="w.mcp"><b>7 servidores MCP</b> para que agentes de IA consulten la plataforma en solo lectura.</li>
+        </ul>
+        <p class="band-foot" data-i18n="band.foot">8+ años en la plataforma · 9.000+ commits propios · 12.000+ horas en 630+ tareas · 17.000+ pruebas automáticas</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="trayectoria" aria-labelledby="career-title">
+      <h2 class="h2" id="career-title" data-i18n="career.title">Trayectoria</h2>
+      <ol class="career">
+        <li>
+          <span class="when" data-i18n="c1.when">2023 – hoy</span>
+          <div>
+            <h3 data-i18n="c1.role">Tech Lead · Equipo de Automatización</h3>
+            <p class="muted">Wireless DNA · Palma</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2019 – 2023</span>
+          <div>
+            <h3 data-i18n="c2.role">Ingeniero de software · Datos y automatización</h3>
+            <p class="muted" data-i18n="c2.what">Wireless DNA · Pipelines ETL de datos de red y automatización con Python, Bash y Docker.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2018 – 2019</span>
+          <div>
+            <h3 data-i18n="c3.role">Ingeniero de operaciones</h3>
+            <p class="muted" data-i18n="c3.what">Wireless DNA · Monitorización de red. A los seis meses pasé a desarrollo.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2017</span>
+          <div>
+            <h3 data-i18n="c4.role">Big Data Engineer (prácticas)</h3>
+            <p class="muted">XML Travelgate · Palma</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section wrap split" aria-label="Open source y formación">
+      <div>
+        <h2 class="h2" data-i18n="os.title">Open source</h2>
+        <ul class="plain">
+          <li><a href="https://github.com/kalexnolasco/webgate" target="_blank" rel="noopener"><b>webgate</b></a> <span class="muted" data-i18n="os.webgate">Pasarela web SSH y SFTP autoalojada (FastAPI). En PyPI.</span></li>
+          <li><a href="https://github.com/kalexnolasco/systemd-client" target="_blank" rel="noopener"><b>systemd-client</b></a> <span class="muted" data-i18n="os.systemd">Librería de Python para systemd. En PyPI.</span></li>
+        </ul>
+      </div>
+      <div id="formacion">
+        <h2 class="h2" data-i18n="edu.title">Formación</h2>
+        <ul class="plain edu-list">
+          <li><b data-i18n="e.tel">Grado en Ingeniería Telemática</b> <span class="muted">UIB · 2013 – 2020</span></li>
+          <li><b data-i18n="e.mat">Grado en Matemáticas</b> <span class="muted">UIB · 2013 – 2020</span></li>
+          <li><b data-i18n="e.exch">Intercambio en Ingeniería Informática</b> <span class="muted" data-i18n="e.exchW">Universidad de Guadalajara, México · 2018</span></li>
+          <li><b>Apache Airflow 3 Fundamentals</b> <span class="muted" data-i18n="e.cert">Astronomer · 2025</span></li>
+          <li><b data-i18n="e.lang">Idiomas</b> <span class="muted" data-i18n="e.langV">Español nativo · Catalán básico · Inglés básico</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wrap close" aria-labelledby="close-title">
+      <h2 id="close-title" data-i18n="close.title">¿Hablamos?</h2>
+      <div class="cta">
+        <a class="btn primary" href="mailto:kalex.nolasco@gmail.com">kalex.nolasco@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/kalexnolasco" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/kalexnolasco" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p class="muted foot-line">© <span id="year">2026</span> Alex Nolasco · <a href="index.html" data-i18n="foot.back">Volver al portafolio</a></p>
+  </footer>
+  <script src="assets/cv.js" defer></script>
+</body>
+</html>
